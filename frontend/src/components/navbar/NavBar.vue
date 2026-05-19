@@ -29,7 +29,7 @@ import SearchIcon from "@/components/navbar/icons/SearchIcon.vue";
 </div>
       </div>
       <div class="navbar-end">
-        <button class="btn btn-ghost text-lg">登陆</button>
+        <RouterLink :to="{name :'user-account-login-index'}" button-active="menu-focus" class="btn btn-ghost text-lg">登陆</RouterLink>
       </div>
     </nav>
     <slot></slot>
@@ -42,25 +42,25 @@ import SearchIcon from "@/components/navbar/icons/SearchIcon.vue";
       <ul class="menu w-full grow">
         <!-- List item -->
         <li>
-          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="首页">
+          <RouterLink :to="{name: 'homepage-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="首页">
             <!-- Home icon -->
             <HomepageIcon></HomepageIcon>
             <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">首页</span>
-          </button>
+          </RouterLink>
         </li>
         <li>
-          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="好友">
+          <RouterLink :to="{name: 'friend-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="好友">
             <!-- Home icon -->
             <FriendIcon></FriendIcon>
             <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">好友</span>
-          </button>
+          </RouterLink>
         </li>
         <li>
-          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="创作">
+          <RouterLink :to="{name: 'create-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="创作">
             <!-- Home icon -->
             <CreateIcon></CreateIcon>
             <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">创作</span>
-          </button>
+          </RouterLink>
         </li>
 
       </ul>
